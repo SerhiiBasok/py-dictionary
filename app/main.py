@@ -47,12 +47,12 @@ class Dictionary:
         hash(key)
         index_of_cell = self._get_index_(key)
         if self.table[index_of_cell] is None:
-            raise KeyError("Key not found")
+            raise KeyError(f"Key: {key} not found")
         else:
             for i, (k, v, h) in enumerate(self.table[index_of_cell]):
                 if key == k:
                     return v
-            raise KeyError("Keys are different")
+            raise KeyError(f"Key: {key} are different")
 
     def __len__(self) -> int:
         return self.size
