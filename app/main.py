@@ -47,7 +47,7 @@ class Dictionary:
         hash(key)
         index_of_cell = self._get_index_(key)
         if self.table[index_of_cell] is None:
-            raise KeyError(f"Key: {key} not found")
+            raise KeyError("Key not found")
         else:
             for i, (k, v, h) in enumerate(self.table[index_of_cell]):
                 if key == k:
